@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reservation</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+   		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+	</head>
+	<body>
+		<!----- start-header---->
+			<!----- //End-header---->
+			<!----- menu-page ----->
+			<div class="reservation">
+				<!------ menu-header ----->
+				<div class="reservation-header">
+					<div class="container">
+						<h1><span>Resto</span> Restaurant</h1>
+					</div>
+				</div>
+				<!------ menuheader ----->
+			<div class="clearfix"> </div>
+			<!----- reservation ---->
+			<div class="reservation-form">
+				<div class="container">
+					<h2><span> </span>&nbsp;&nbsp;&nbsp;&nbsp; 用户登录 &nbsp;<span> </span></h2>
+				</div>
+				<!----- make-Reserver ------>
+				<!------ login ----->
+				<div class="make-reserve" style="position: relative;width: 100%">
+					<div class="container" style="position: absolute;margin:auto;width: 50%;left: 0;right: 0">
+					<div id="login">
+						<div class="reserv-form" >
+							<!----->
+							<div class="i-email user" >
+								<span>用户名</span>
+								<input type="text" name="user">
+							</div>
+							<!----->
+							<div class="i-email password">
+								<span>密码</span>
+								<input type="text" name="password">
+							</div>
+							<input type="submit" value="登录" name="login" />
+							
+						</div>
+						<h3>还没有注册？</h3>
+						<p>点击这里<span id="show_1" style="color: red">注册</span>成为新用户哦</p>
+					</div>
+					<div id="registered" style="display: none;">
+						<div class="reserv-form" >
+							<!----->
+							<div class="i-email user">
+								<span>用户名</span>
+								<input name="user" type="text">
+							</div>
+							<!----->
+							<div class="i-email password">
+								<span>密码</span>
+								<input name="password" type="text">
+							</div>
+							<input type="submit" value="注册" name="registered" />
+						</div>
+						<p>点击这里跳转到<span id="show_2" style="color: red">登录</span></p>
+					</div>
+				</div>
+				<!------ login-form ----->
+				<!----- make-Reserver ------>
+			</div>
+			<!----- End-Menu-page ----->
+	
+</body>
+<script src="js/user.js" charset="utf-8"></script>
+</html>
+
